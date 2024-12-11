@@ -21,7 +21,9 @@ document.body.innerHTML = 'Good morning!';
 document.body.innerHTML = 'Uday';
 
 console.log(10 + 8 + 20);
+console.log(848.55 + 678.84 + 1697.10);
 
 console.log(100 - 50 - 20 + 200);
+console.log(8485.50 - 4242.75 - 1697.10 + 16971.00);
 
 document.body.innerHTML = '';
