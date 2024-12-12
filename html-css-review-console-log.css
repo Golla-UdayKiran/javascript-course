@@ -1,0 +1,20 @@
+/*
+  This is a comment.
+*/
+.red-button {
+  background-color: red;
+  color: white;
+  border: none;
+}
+
+.yellow-button {
+  background-color: yellow;
+}
+
+.add-to-cart-button {
+  background-color: yellow;
+}
+
+.buy-now-button {
+  background-color: orange;
+}
