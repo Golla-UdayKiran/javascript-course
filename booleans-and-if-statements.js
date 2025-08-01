@@ -59,8 +59,10 @@ false && console.log('hello');
 const message = 5 && 'hello';
 console.log(message);
 
-const currency = undefined || 'USD';
-console.log(currency);
+const currency1 = undefined || 'USD';
+console.log(currency1);
+const currency2 = undefined || 'INR';
+console.log(currency2);
 
 // Try changing this variable to
 // display different messages.
