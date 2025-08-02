@@ -89,11 +89,3 @@ if ((age <= 6 || age >= 65) && !isHoliday) {
 } else {
   console.log('No discount');
 }
-
-const randomNumber = Math.random();
-const result2 = randomNumber < 0.5 ? 'heads' : 'tails';
-
-const guess = 'heads';
-console.log(guess === result2 ? 'You win!' : 'You lose!');
-
-let cartQuantity = 0;
