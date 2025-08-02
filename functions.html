@@ -6,54 +6,6 @@
   <body>
     <h1>Functions</h1>
 
-    <h2>Amazon</h2>
-    <p>Cart Quantity</p>
-
-    <button onclick="
-      console.log(`Cart quantity: ${cartQuantity}`);
-    ">Show Quantity</button>
-
-    <button onclick="
-      updateCartQuantity(1);
-    ">Add to Cart</button>
-
-    <button onclick="
-      updateCartQuantity(2);
-    ">+2</button>
-
-    <button onclick="
-      updateCartQuantity(3);
-    ">+3</button>
-
-    <button onclick="
-      updateCartQuantity(4);
-    ">+4</button>
-
-    <button onclick="
-      updateCartQuantity(5);
-    ">+5</button>
-
-
-    <!-- vvv This code was changed. vvv -->
-    <button onclick="
-      updateCartQuantity(-1);
-    ">Remove from cart</button>
-
-    <button onclick="
-      updateCartQuantity(-2);
-    ">-2</button>
-
-    <button onclick="
-      updateCartQuantity(-3);
-    ">-3</button>
-    <!-- ^^^ This code was changed. ^^^ -->
-
-    <button onclick="
-      cartQuantity = 0;
-      console.log('Cart was reset.');
-      console.log(`Cart quantity: ${cartQuantity}`);
-    ">Reset Cart</button>
-
     <script src="functions.js"></script>
   </body>
 </html>
