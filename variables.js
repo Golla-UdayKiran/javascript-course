@@ -20,8 +20,6 @@ console.log(variable1);
 const variable2 = 3;
 var variable3 = 3;
 
-let cartQuantity = 0;
-
 const name = 'Uday';
 
 console.log(`My name is: ${name}`);
