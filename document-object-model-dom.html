@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document Object Model (DOM)</title>
+  </head>
+  <body>
+    <h1>Document Object Model (DOM)</h1>
+    
+    <button>hello</button>
+    <button class="js-button">Second button</button><br><br>
+
+    <button class="js-9a">9a</button><br><br>
+
+    <!-- Feel free to use a different class name. -->
+    <button class="js-9b">9b</button><br><br>
+
+    <button onclick="
+      document.querySelector('.js-choice')
+        .innerHTML = 'You chose: heads';
+    ">heads</button>
+
+    <button onclick="
+      document.querySelector('.js-choice')
+        .innerHTML = 'You chose: tails';
+    ">tails</button>
+
+    <p class="js-choice"></p>
+
+    <input placeholder="Name" class="js-name-input"
+      onkeydown="
+        if (event.key === 'Enter') {
+          // Optional: instead of duplicating this code,
+          // you could also put it in a function.
+          displayMessage();
+        }    
+      ">
+
+    <button onclick="
+      displayMessage();
+    ">Submit</button>
+
+    <p class="js-message"></p>
+
+    <h2>Amazon</h2>
+
+    <!-- Answer is at the bottom. -->
+    <p>Amazon Shipping Calculator</p>
+
+    <h3>Amazon.com - America</h3>
+    <p>Orders under $40 = +$10 shipping.</p>
+    <p>Orders over $40 = FREE shipping.</p>
+    <input placeholder="Cost of order" class="js-cost-input-usd" onkeydown="
+      handleCostKeydownUSD(event);
+    ">
+    <button onclick="
+      calculateTotalUSD();
+    ">Calculate</button>
+    <p class="js-total-cost-usd"></p>
+
+    <h3>Amazon.in - India</h3>
+    <p>Orders under ₹3,505.20 = +₹876.30 shipping.</p>
+    <p>Orders over ₹3,505.20 = FREE shipping.</p>
+    <input placeholder="Cost of order" class="js-cost-input-inr" onkeydown="
+      handleCostKeydownINR(event);
+    ">
+    <button onclick="
+      calculateTotalINR();
+    ">Calculate</button>
+    <p class="js-total-cost-inr"></p>
+
+    <input placeholder="Type something" class="js-input"
+      onkeyup="
+        const inputElement = document.querySelector('.js-input');
+        document.querySelector('.js-message-output')
+          .innerHTML = inputElement.value;
+      ">
+
+    <p class="js-message-output"></p>
+
+    <script src="document-object-model-dom.js"></script>
+  </body>
+</html>
