@@ -255,3 +255,184 @@ function countWords(words) {
 }
 
 console.log(countWords(['apple', 'grape', 'apple', 'apple']));
+
+const array1 = [1, 2, 3];
+const array2 = array1.slice();
+array2.push(4);
+console.log(array1);
+console.log(array2);
+
+const [firstValue, secondValue] = [1, 2, 3];
+
+for (let i = 1; i <= 10; i++) {
+  if (i % 3 === 0) {
+    continue;
+  }
+  console.log(i);
+  if (i === 8) {
+    break;
+  }
+}
+
+i = 1;
+
+while (i <= 10) {
+  if (i % 3 === 0) {
+    i++;
+    continue;
+  }
+  console.log(i);
+  i++;
+}
+
+function doubleArray(nums) {
+  const numsDoubled = [];
+
+  for (let i = 0; i < nums.length; i++) {
+    const num = nums[i];
+    if (num === 0) {
+      return numsDoubled;
+    }
+    numsDoubled.push(num * 2);
+  }
+  return numsDoubled;
+}
+console.log(doubleArray([1, 1, 3]));
+console.log(doubleArray([2, 2, 5, 0, 5]));
+
+let words = ['hello', 'world', 'search', 'good', 'search'];
+
+// Set the index to -1 at the start (so we'll assume
+// the string 'search' doesn't exist in the array).
+// If we find the string 'search' in the array, we
+// will update the index.
+let index = -1;
+
+for (let i = 0; i < words.length; i++) {
+  if (words[i] === 'search') {
+    index = i;
+    // Once we find 'search', immediately exit
+    // the loop since we want the index of the
+    // first appearance of 'search'.
+    break;
+  }
+}
+
+console.log(index);
+
+words = ['not', 'found'];
+index = -1;
+
+for (let i = 0; i < words.length; i++) {
+  if (words[i] === 'search') {
+    index = i;
+    break;
+  }
+}
+
+console.log(index);
+
+function findIndex(array, word) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === word) {
+      // Instead of creating an accumulator
+      // variable and updating it in the loop,
+      // we can just return i directly, when
+      // we find it since this is a function.
+      return i;
+    } 
+  }
+  
+  // If the function has not returned by now,
+  // logically that means the word must not
+  // exist in the array, so we'll return -1.
+  return -1;
+}
+
+console.log(findIndex(['green', 'red', 'blue', 'red'], 'red'));
+console.log(findIndex(['green', 'red', 'blue', 'red'], 'yellow'));
+
+function unique(array) {
+  const result = [];
+
+  for (let i = 0; i < array.length; i++) {
+    const word = array[i];
+
+    // Using the findIndex() function from above, we
+    // can check if the string is already in the
+    // result array. If it's not in the result array
+    // (index is -1), then add it to the result array.
+    if (findIndex(result, word) === -1) {
+      result.push(word);
+    }
+  }
+
+  return result;
+}
+
+console.log(unique(['green', 'red', 'blue', 'red']));
+console.log(unique(['red', 'green', 'green', 'red']));
+
+function removeEgg(foods) {
+  // To remove the last 2 'egg', reverse the array first.
+
+  // To prevent modifying the original array, we
+  // can create a copy of the array using .slice()
+  const foodsCopy = foods.slice();
+  const reversedFoods = foodsCopy.reverse();
+
+  // Advanced technique:
+  // Since foods.slice() results in an array, we
+  // can also use .reverse() directly like this:
+  // foods.slice().reverse();
+
+  // This technique is called "method chaining"
+  // because we use one method after another
+  // (like a chain of methods).
+  const result = [];
+  let eggsRemoved = 0;
+
+  for (let i = 0; i < reversedFoods.length; i++) {
+    // If the string is 'egg', use continue to skip it.
+
+    // Only skip 'egg' if we removed less than 2
+    // of them so far.
+    if (reversedFoods[i] === 'egg' && eggsRemoved < 2) {
+      // Update the number of 'egg' we have removed.
+      // This must be done before continue, otherwise,
+      // doing continue first will just skip this code.
+      eggsRemoved++;
+      continue;
+    }
+    
+    // We don't need to have an else here because
+    // the only way to reach this code is if the
+    // if-statement above is false.
+    result.push(reversedFoods[i]);
+  }
+
+  // At the end, remember to .reverse() back the result.
+  return result.reverse();
+}
+
+const foods = ['egg', 'apple', 'egg', 'egg', 'ham'];
+console.log(removeEgg(foods));
+console.log(foods);
+
+for (let i = 1; i <= 20; i++) {
+  // The trick to this problem is to check if
+  // the number is divisible by 3 and 5 first.
+  // Otherwise, it will always display 'Fizz'.
+  if (i % 3 === 0 && i % 5 === 0) {
+    console.log('FizzBuzz');
+  
+  } else if (i % 3 === 0) {
+    console.log('Fizz');
+  
+  } else if (i % 5 === 0) {
+    console.log('Buzz');
+  
+  } else {
+  console.log(i);
+  }
+}
