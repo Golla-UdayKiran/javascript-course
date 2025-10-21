@@ -9,4 +9,5 @@
 <p>8. <a href="https://supersimple.dev/projects/dom-with-css">DOM Exercises</a></p>
 <p>9. <a href="https://supersimple.dev/projects/rock-paper-scissors">Rock Paper Scissors</a></p>
 <p>10. <a href="https://supersimple.dev/projects/arrays">Arrays</a></p>
+<p>11. <a href="https://supersimple.dev/projects/advanced-functions">Rock Paper Scissors</a></p>
 <code>website</code>: https://golla-udaykiran.github.io/javascript-course
