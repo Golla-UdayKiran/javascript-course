@@ -4,7 +4,7 @@ alert('Good job!');
 console.log(2 + 2);
 console.log(10 - 3);
 
-document.body.innerHTML = 'hello';
+// document.body.innerHTML = 'hello';
 
 alert('Good morning!');
 
@@ -16,9 +16,9 @@ console.log(20 - 5);
 
 console.log(2 + 2 - 5);
 
-document.body.innerHTML = 'Good morning!';
+// document.body.innerHTML = 'Good morning!';
 
-document.body.innerHTML = 'Uday';
+// document.body.innerHTML = 'Uday';
 
 console.log(10 + 8 + 20);
 console.log(848.55 + 678.84 + 1697.10);
