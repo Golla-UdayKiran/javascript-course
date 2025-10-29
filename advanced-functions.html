@@ -6,13 +6,9 @@
   <body>
     <h1>Advanced Functions</h1>
 
-    <button class="js-button" onclick="
-      updateButton();
-    ">Start</button><br><br>
+    <button class="js-button1">Start</button><br><br>
 
-    <button class="js-button" onclick="
-      displayMessage();
-    ">Add to cart</button>
+    <button class="js-button2">Add to cart</button>
 
     <p class="js-message"></p>
 
@@ -21,22 +17,11 @@
       solutions are possible so don't worry if
       your solution looks different.
     -->
-    <button onclick="
-      messages++;
-      displayNotification();
-    ">Add</button>
+    <button class="js-button3">Add</button>
 
-    <button onclick="
-      if (messages > 0) {
-        messages--;
+    <button class="js-button4">Remove</button><br><br>
 
-        // If there are no new messages, stop displaying
-        // the notification in the tab.
-        if (messages === 0) {
-          stopNotification();
-        }
-      }
-    ">Remove</button>
+    <button onclick="" class="js-button5">Click</button>
 
     <script src="scripts/advanced-functions.js"></script>
   </body>
